@@ -42,4 +42,7 @@ def inputNum():
     return int(input())
 
 
-print(calc(inputNum()))
+result = calc(inputNum())
+with open("Result.txt", mode="w") as f:
+    for r in result:
+        f.write(str(r) + "\n")
