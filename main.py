@@ -24,6 +24,8 @@ def calc(num):
             sgn = 1
             for idx in range(lta):
                 key = d + n * idx
+                if key > num:
+                    break
                 nndp = new_dp.get(key, 0)
                 tmp = dp.get(d) * (sgn * ta[idx])
                 new_dp[key] = nndp + tmp
